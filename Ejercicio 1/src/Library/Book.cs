@@ -5,11 +5,11 @@ namespace SRP
     public class Book
     {
         // Información del libro:                   TÍTULO
-        public string Title { get ; }
+        private string Title { get ; }
         // Información del libro:                   AUTOR
-        public string Author { get ; }
+        private string Author { get ; }
         // Información del libro:                   CÓDIGO DE IDENTIFICACIÓN
-        public string Code { get ;  }
+        private string Code { get ;  }
 
         // Ubicación en la bibloteca:               SECTOR
         //public string LibrarySector { get ; set; }
