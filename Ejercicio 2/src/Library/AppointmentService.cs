@@ -5,10 +5,29 @@ namespace Library
 {
     public class AppointmentService
     {
-        public static string CreateAppointment(string name, string id, string phoneNumber, DateTime date, string appoinmentPlace, string doctorName)
-        {
+        private MedicalAppointment MedicalAppointment { get; set;}
+        private Pacient Pacient { get; set;}
+        public AppointmentService(Pacient pacient, MedicalAppointment mapp) {
+            this.MedicalAppointment = mapp;
+            this.Pacient = pacient;
+        }
+
+        public AppointmentResult Schedule() {
+            return this.CheckAppointment();
+        }
+
+        private AppointmentResult CheckAppointment() {
             StringBuilder stringBuilder = new StringBuilder("Scheduling appointment...\n");
             Boolean isValid = true;
+
+            PacientInfo pi = this.Pacient.GetPacientInfo();
+            string name = pi.GetName();
+            string id = pi.GetId();
+            string phoneNumber = pi.GetPhoneNumber();
+
+            MedicalAppointment ma = this.MedicalAppointment;
+            string appoinmentPlace = ma.GetAppointmentPlace();
+            string doctorName = ma.GetDoctorName();
 
             if (string.IsNullOrEmpty(name))
             {
@@ -46,8 +65,7 @@ namespace Library
                 stringBuilder.Append("Appoinment scheduled");
             }
 
-            return stringBuilder.ToString();
+            return new AppointmentResult(isValid, stringBuilder.ToString());
         }
-
     }
 }
