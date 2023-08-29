@@ -20,17 +20,17 @@ namespace Library {
         }
 
         public void SetName(string name) {
-            if (string.IsNullOrEmpty(name)) {
+            if (!string.IsNullOrEmpty(name)) {
                 this.Name = name;
             }
         }
         public void SetId(string id) {
-            if (string.IsNullOrEmpty (id)) {
+            if (!string.IsNullOrEmpty(id)) {
                 this.Id = id;
             }
         }
         public void SetPhoneNumber(string phone) {
-            if (string.IsNullOrEmpty(phone)) {
+            if (!string.IsNullOrEmpty(phone)) {
                 this.PhoneNumber = phone;
             }           
         }
