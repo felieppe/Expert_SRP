@@ -17,13 +17,6 @@ namespace SRP
             // Loc.book2
             Shelve she2 = new Shelve("3", book2);
             Sector sec2 = new Sector("B", she2);
-
-            // dentro de sector va shelve
-            // dentro de shelve va book
-
-
-            //book1.ShelveBook("A","7");
-            //book2.ShelveBook("B","3");
         }
     }
 }
