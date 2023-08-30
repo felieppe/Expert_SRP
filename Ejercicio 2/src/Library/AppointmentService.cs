@@ -12,8 +12,25 @@ namespace Library
             this.Pacient = pacient;
         }
 
+        public void SetMedicalAppointment(MedicalAppointment mapp) {
+            if (mapp != null) {
+                this.MedicalAppointment = mapp;
+            }
+        }
+        public void SetPacient(Pacient p) {
+            if (p != null) {
+                this.Pacient = p;
+            }
+        }
+
         public AppointmentResult Schedule() {
             return this.CheckAppointment();
+        }
+        public MedicalAppointment GetMedicalAppointment() {
+            return MedicalAppointment;
+        }
+        public Pacient GetPacient() {
+            return Pacient;
         }
 
         private AppointmentResult CheckAppointment() {
