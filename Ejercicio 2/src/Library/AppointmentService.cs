@@ -54,7 +54,7 @@ namespace Library
 
             if (string.IsNullOrEmpty(id))
             {
-                stringBuilder.Append("Unable to schedule appointment, 'id' is required\n");
+                stringBuilder.Append("Unable to schedule appointment, 'person id' is required\n");
                 isValid = false;
             }
 
