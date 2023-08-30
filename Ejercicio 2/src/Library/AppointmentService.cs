@@ -43,9 +43,11 @@ namespace Library
             string phoneNumber = pi.GetPhoneNumber();
 
             MedicalAppointment ma = this.MedicalAppointment;
+            string appointmentId = ma.GetId();
             string appoinmentPlace = ma.GetAppointmentPlace();
             string doctorName = ma.GetDoctor().GetName();
 
+            // Pacient
             if (string.IsNullOrEmpty(name))
             {
                 stringBuilder.Append("Unable to schedule appointment, 'name' is required\n");
@@ -64,13 +66,12 @@ namespace Library
                 isValid = false;
             }
 
+            // Medical Appointment
             if (string.IsNullOrEmpty(appoinmentPlace))
             {
                 stringBuilder.Append("Unable to schedule appointment, 'appoinment place' is required\n");
                 isValid = false;
             }
-
-
             if (string.IsNullOrEmpty(doctorName))
             {
                 stringBuilder.Append("Unable to schedule appointment, 'doctor name' is required\n");
