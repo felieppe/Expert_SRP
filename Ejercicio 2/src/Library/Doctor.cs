@@ -11,8 +11,8 @@ namespace Library
         private string Speciality {get; set;}
 
         public Doctor(string name, string speciality) {
-            this.Name = name;
-            this.Speciality = speciality;
+            SetName(name);
+            SetSpeciality(speciality);
         }
 
         public string GetName() {

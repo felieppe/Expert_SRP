@@ -5,10 +5,10 @@ namespace Library {
         private string Id {get; set;}
         private string PhoneNumber {get; set;}
         public PacientInfo(string name, int age, string id, string phoneNumber) {
-            this.Name = name;
-            this.Age = age;
-            this.Id = id;
-            this.PhoneNumber = phoneNumber;
+            SetName(name);
+            SetAge(age);
+            SetId(id);
+            SetPhoneNumber(phoneNumber);
         }
 
         public string GetName() {

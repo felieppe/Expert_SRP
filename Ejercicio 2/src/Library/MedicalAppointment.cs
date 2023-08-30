@@ -6,9 +6,9 @@ namespace Library {
         private string AppointmentPlace {get; set;}
         private Doctor Doctor {get; set;}
         public MedicalAppointment (DateTime date, string place, Doctor doc) {
-            this.Date = date;
-            this.AppointmentPlace = place;
-            this.Doctor = doc;
+            SetDateTime(date);
+            SetAppointmentPlace(place);
+            SetDoctor(doc);
         }
 
         public DateTime GetDateTime() {

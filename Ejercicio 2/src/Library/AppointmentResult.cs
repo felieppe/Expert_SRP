@@ -5,8 +5,8 @@ namespace Library {
         private bool Validity {get; set;}
         private string Result {get; set;}
         public AppointmentResult (bool valid, string result) {
-            this.Validity = valid;
-            this.Result = result;
+            SetValidity(valid);
+            SetResult(result);
         }
 
         public bool GetValidity() {

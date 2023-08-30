@@ -4,7 +4,7 @@ namespace Library {
     public class Pacient {
         private PacientInfo PacientInfo { get; set; }
         public Pacient(PacientInfo pi) {
-            this.PacientInfo = pi;
+            SetPacientInfo(pi);
         }
 
         public PacientInfo GetPacientInfo() {

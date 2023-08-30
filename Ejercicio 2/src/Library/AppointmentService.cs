@@ -8,8 +8,8 @@ namespace Library
         private MedicalAppointment MedicalAppointment { get; set;}
         private Pacient Pacient { get; set;}
         public AppointmentService(Pacient pacient, MedicalAppointment mapp) {
-            this.MedicalAppointment = mapp;
-            this.Pacient = pacient;
+            SetMedicalAppointment(mapp);
+            SetPacient(pacient);
         }
 
         public void SetMedicalAppointment(MedicalAppointment mapp) {
