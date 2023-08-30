@@ -1,11 +1,14 @@
 ﻿using System;
+using System.Collections.Generic;
 using Library;
 
 namespace Program
 {
-    class Program
+    public class Program
     {
-        static void Main(string[] args)
+        private List<string> InUseAppointmentsIds = new List<string>();
+    
+        public static void Main(string[] args)
         {
             PacientInfo pacientInfo = new PacientInfo("Steven Jhonson", 18, "986782342", "5555-555-555");
             Doctor doctor = new Doctor("Armand", "");
