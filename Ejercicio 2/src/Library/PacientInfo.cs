@@ -14,6 +14,9 @@ namespace Library {
         public string GetName() {
             return this.Name;
         }
+        public int GetAge() {
+            return this.Age;
+        }
         public string GetId() {
             return this.Id;
         }
@@ -25,6 +28,9 @@ namespace Library {
             if (!string.IsNullOrEmpty(name)) {
                 this.Name = name;
             }
+        }
+        public void SetAge(int age) {
+            this.Age = age;
         }
         public void SetId(string id) {
             if (!string.IsNullOrEmpty(id)) {
