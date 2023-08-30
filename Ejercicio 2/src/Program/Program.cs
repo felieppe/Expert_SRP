@@ -25,6 +25,6 @@ namespace Program
             AppointmentService aps2 = new AppointmentService(pacient2, medicalAppointment2);
 
             Console.WriteLine(aps2.Schedule().GetResult());
-        }
+        }   
     }
 }
