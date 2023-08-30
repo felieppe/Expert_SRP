@@ -27,7 +27,7 @@ namespace Library
 
             MedicalAppointment ma = this.MedicalAppointment;
             string appoinmentPlace = ma.GetAppointmentPlace();
-            string doctorName = ma.GetDoctorName();
+            string doctorName = ma.GetDoctor().GetName();
 
             if (string.IsNullOrEmpty(name))
             {

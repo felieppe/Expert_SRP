@@ -4,11 +4,11 @@ namespace Library {
     public class MedicalAppointment {
         private DateTime Date {get; set;}
         private string AppointmentPlace {get; set;}
-        private string DoctorName {get; set;}
-        public MedicalAppointment (DateTime date, string place, string doctorName) {
+        private Doctor Doctor {get; set;}
+        public MedicalAppointment (DateTime date, string place, Doctor doc) {
             this.Date = date;
             this.AppointmentPlace = place;
-            this.DoctorName = doctorName;
+            this.Doctor = doc;
         }
 
         public DateTime GetDateTime() {
@@ -17,8 +17,8 @@ namespace Library {
         public string GetAppointmentPlace() {
             return this.AppointmentPlace;
         }
-        public string GetDoctorName() {
-            return this.DoctorName;
+        public Doctor GetDoctor() {
+            return this.Doctor;
         }
 
         public void SetDateTime(DateTime dateTime) {
@@ -31,9 +31,9 @@ namespace Library {
                 this.AppointmentPlace = appoinmentPlace;
             }
         }
-        public void SetDoctorName(string doctorName) {
-            if (!string.IsNullOrEmpty(doctorName)) {
-                this.DoctorName = doctorName;
+        public void SetDoctor(Doctor doc) {
+            if (doc != null) {
+                this.Doctor = doc;
             }
         }
     }

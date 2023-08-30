@@ -1,10 +1,12 @@
 namespace Library {
     public class PacientInfo {
         private string Name {get; set;}
+        private int Age {get; set;}
         private string Id {get; set;}
         private string PhoneNumber {get; set;}
-        public PacientInfo(string name, string id, string phoneNumber) {
+        public PacientInfo(string name, int age, string id, string phoneNumber) {
             this.Name = name;
+            this.Age = age;
             this.Id = id;
             this.PhoneNumber = phoneNumber;
         }
